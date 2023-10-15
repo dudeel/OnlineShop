@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:online_shop/core/ui/widgets/widgets.dart';
+import 'package:online_shop/features/otp_confirm_page/widgets/widgets.dart';
 
 class OTPConfirmPage extends StatelessWidget {
-  const OTPConfirmPage({super.key});
+  const OTPConfirmPage({
+    Key? key,
+    required this.phoneNumber,
+  }) : super(key: key);
 
-  final String phoneNumber = '+7 (900) 000-00-00';
+  final String phoneNumber;
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +43,16 @@ class OTPConfirmPage extends StatelessWidget {
               InfoText(
                 header: 'Введите код',
                 body: 'SMS-сообщение с кодом отправлено на номер $phoneNumber',
+              ),
+              const SizedBox(height: 30),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  PinCard(index: 0),
+                  PinCard(index: 1),
+                  PinCard(index: 2),
+                  PinCard(index: 3),
+                ],
               ),
             ],
           ),

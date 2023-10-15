@@ -14,7 +14,9 @@ class OnlineShop extends StatelessWidget {
     return MaterialApp(
       title: 'OnlineShop',
       theme: themeData,
-      home: const OTPConfirmPage(),
+      home: const OTPConfirmPage(
+        phoneNumber: '+7 (900) 000-00-00',
+      ),
     );
   }
 }
