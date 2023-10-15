@@ -15,7 +15,7 @@ class PhoneNumberLine extends StatelessWidget {
       ),
       child: TextField(
         decoration: InputDecoration(
-          hintText: '(900) 000 00 - 00',
+          hintText: '(900) 000-00-00',
           hintStyle: TextStyle(
             fontSize: 18,
             color: theme.hintColor.withOpacity(0.4),

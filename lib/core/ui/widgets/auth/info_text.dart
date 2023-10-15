@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
-class InfoEnteringText extends StatelessWidget {
-  const InfoEnteringText({super.key});
+class InfoText extends StatelessWidget {
+  const InfoText({super.key, required this.header, required this.body});
+
+  final String header;
+  final String body;
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +13,7 @@ class InfoEnteringText extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Text(
-          'Вход',
+          header,
           style: TextStyle(
             fontSize: 26,
             color: theme.hintColor.withOpacity(1),
@@ -18,7 +21,7 @@ class InfoEnteringText extends StatelessWidget {
           ),
         ),
         Text(
-          'Укажите номер телефона, и мы отправим на него SMS-сообщение с кодом',
+          body,
           style: TextStyle(
             fontSize: 14,
             color: theme.hintColor.withOpacity(0.6),
